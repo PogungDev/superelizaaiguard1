@@ -16,14 +16,7 @@
       "runtime": "nodejs18.x"
     }
   },
-  "env": {
-    "NEXT_PUBLIC_INFURA_API_KEY": "@infura_api_key",
-    "NEXT_PUBLIC_PRIVATE_KEY": "@private_key",
-    "NEXT_PUBLIC_CONTRACT_ADDRESS": "@contract_address",
-    "CHAINLINK_NODE_URL": "@chainlink_node_url",
-    "CHAINLINK_EMAIL": "@chainlink_email",
-    "CHAINLINK_PASSWORD": "@chainlink_password"
-  },
+
   "headers": [
     {
       "source": "/(.*)",
