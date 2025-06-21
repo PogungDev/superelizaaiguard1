@@ -1,0 +1,14 @@
+{
+  "0x1234567890abcdef1234567890abcdef12345678": {
+    "oracleBot": true,
+    "mevProtector": false,
+    "liquidationGuard": true,
+    "yieldSwitcher": true
+  },
+  "0x9876543210fedcba9876543210fedcba98765432": {
+    "oracleBot": false,
+    "mevProtector": true,
+    "liquidationGuard": false,
+    "yieldSwitcher": false
+  }
+}

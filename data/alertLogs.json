@@ -1,0 +1,26 @@
+[
+  {
+    "agent": "Liquidation Guard",
+    "time": "2025-06-18T06:55:00Z",
+    "status": "CRITICAL",
+    "message": "LTV 82% — auto-action triggered"
+  },
+  {
+    "agent": "MEV Protector",
+    "time": "2025-06-18T06:45:00Z",
+    "status": "WARNING",
+    "message": "Gas spike & mempool congestion"
+  },
+  {
+    "agent": "OracleBot",
+    "time": "2025-06-18T06:30:00Z",
+    "status": "INFO",
+    "message": "Price feed stable, no action needed."
+  },
+  {
+    "agent": "Yield Switcher",
+    "time": "2025-06-18T06:20:00Z",
+    "status": "SUCCESS",
+    "message": "Switched to higher yield vault."
+  }
+]
