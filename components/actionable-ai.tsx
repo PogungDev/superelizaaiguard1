@@ -257,7 +257,7 @@ export function ActionableAI({ onActionExecuted }: ActionableAIProps) {
                   <div className="flex items-start space-x-3 flex-1">
                     <div className="flex items-center space-x-2 mt-1">
                       {getTypeIcon(recommendation.type)}
-                      <Badge variant={getPriorityColor(recommendation.priority)} size="sm">
+                      <Badge variant={getPriorityColor(recommendation.priority)}>
                         {recommendation.priority.toUpperCase()}
                       </Badge>
                     </div>
@@ -308,14 +308,14 @@ export function ActionableAI({ onActionExecuted }: ActionableAIProps) {
                         )}
 
                         {!recommendation.canExecute && (
-                          <Badge variant="outline" size="sm">
+                          <Badge variant="outline">
                             <Clock className="h-3 w-3 mr-1" />
                             Monitoring
                           </Badge>
                         )}
 
                         {recommendation.isCompleted && (
-                          <Badge variant="outline" size="sm" className="text-green-600 border-green-200">
+                          <Badge variant="outline" className="text-green-600 border-green-200">
                             <CheckCircle className="h-3 w-3 mr-1" />
                             Completed
                           </Badge>

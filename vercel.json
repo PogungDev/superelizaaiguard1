@@ -1,0 +1,52 @@
+{
+  "name": "superelizaaiguard1",
+  "version": 2,
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "buildCommand": "pnpm build",
+  "outputDirectory": ".next",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "NEXT_PUBLIC_INFURA_API_KEY": "@infura_api_key",
+    "NEXT_PUBLIC_PRIVATE_KEY": "@private_key",
+    "NEXT_PUBLIC_CONTRACT_ADDRESS": "@contract_address",
+    "CHAINLINK_NODE_URL": "@chainlink_node_url",
+    "CHAINLINK_EMAIL": "@chainlink_email",
+    "CHAINLINK_PASSWORD": "@chainlink_password"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+} 

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { OTPInput, type Slot, type OTPInputProps } from "input-otp"
+import { OTPInput, type OTPInputProps } from "input-otp"
 import { Minus } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -18,14 +18,14 @@ const InputOTP = React.forwardRef<React.ElementRef<typeof OTPInput>, OTPInputPro
 )
 InputOTP.displayName = "InputOTP"
 
-const InputOTPGroup = React.forwardRef<React.ElementRef<typeof Slot>, React.ComponentPropsWithoutRef<typeof Slot>>(
+const InputOTPGroup = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => <div ref={ref} className={cn("flex items-center", className)} {...props} />,
 )
 InputOTPGroup.displayName = "InputOTPGroup"
 
 const InputOTPSlot = React.forwardRef<
-  React.ElementRef<typeof Slot>,
-  React.ComponentPropsWithoutRef<typeof Slot> & { index: number }
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & { index: number }
 >(({ index, className, ...props }, ref) => (
   <div
     ref={ref}
@@ -43,7 +43,7 @@ const InputOTPSlot = React.forwardRef<
 ))
 InputOTPSlot.displayName = "InputOTPSlot"
 
-const InputOTPSeparator = React.forwardRef<React.ElementRef<typeof Slot>, React.ComponentPropsWithoutRef<typeof Slot>>(
+const InputOTPSeparator = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div ref={ref} className={cn("-mx-2 flex items-center justify-center", className)} {...props}>
       <Minus />

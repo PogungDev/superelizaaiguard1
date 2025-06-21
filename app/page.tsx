@@ -130,8 +130,8 @@ function VaultGuardApp() {
           break
 
         case "Scan Vault":
-          setCurrentRiskScore(result.riskScore ?? null)
-          if (result.volatilityStatus === "Volatile") {
+          setCurrentRiskScore(result.additionalData?.riskScore ?? null)
+          if (result.additionalData?.riskScore > 80) {
             setVaultHealth(35)
             setRiskLevel("HIGH")
             setAiRecommendedAction("Activate Anti-Liquidation")
